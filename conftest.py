@@ -9,16 +9,8 @@ def pytest_addoption(parser):
 def browser(request):
     lang = request.config.getoption("--language")
     options = Chrome_options()
-    if lang == "en":
-        options.add_argument("lang=en")
-    elif lang == "fr":
-        options.add_argument("lang=fr")
-    elif lang == "de":
-        options.add_argument("lang=de")
-    elif lang == "es":
-        options.add_argument("lang=es")
-    elif lang == "ru":
-        options.add_argument("lang=ru")
+    if lang in ["en", "fr", "de", "es", "ru"]:
+        options.add_argument("lang="+lang)
     else:
         raise ValueError("Invalid language")
 
