@@ -9,7 +9,7 @@ def test_basket_buton_present(browser):
     """If only to check the element is present"""
     browser.get(lnk)
     basket = browser.find_elements(By.CLASS_NAME, "btn-add-to-basket")
-    time.sleep(30)
+    time.sleep(3)
     assert len(basket)>0, "The element is not present"
 
 
@@ -17,7 +17,7 @@ def test_basket_button_work(browser):
     """The element is displayed and enabled"""
     browser.get(lnk)
     basket = browser.find_element(By.CLASS_NAME, "btn-add-to-basket")
-    time.sleep(30)
+    time.sleep(3)
 
     assert basket.is_displayed(), "The element is not displayed"
     print('\nThe element is displayed')
@@ -25,8 +25,8 @@ def test_basket_button_work(browser):
     print('The element is enabled')
 
 
-# pytest --language=es
+# pytest --browser=firefox --language=es
 # pytest --language=en
-# pytest --language=ru
+# pytest --browser=chrome--language=ru
 # pytest --language=de
 # pytest --language=fr
