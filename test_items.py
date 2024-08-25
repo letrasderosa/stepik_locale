@@ -27,6 +27,6 @@ def test_basket_button_work(browser):
 
 # pytest --browser=firefox --language=es
 # pytest --language=en
-# pytest --browser=chrome--language=ru
+# pytest --browser=chrome --language=ru
 # pytest --language=de
 # pytest --language=fr
